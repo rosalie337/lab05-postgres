@@ -5,7 +5,7 @@ CREATE TABLE songs (
     album TEXT
 );
 
-CREATE TABLE nba (
+CREATE TABLE players (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     player TEXT NOT NULL,
     team TEXT NOT NULL,
