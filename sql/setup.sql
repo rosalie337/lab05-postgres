@@ -32,6 +32,7 @@ CREATE TABLE guns (
 CREATE TABLE clothes (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     designer TEXT NOT NULL,
+    year_  YEAR ( date ) NOT NULL
     collection_ TEXT NOT NULL,
     price VALUE NOT NULL,
 )
