@@ -1,7 +1,7 @@
 const fs = require('fs');
 const request = require('supertest');
 const app = require('../lib/app');
-const Song = require('../lib/models/songs');
+const Song = require('../lib/models/Song');
 const pool = require('../lib/utils/pool');
 
 describe('app routes for song model', () => {
@@ -48,7 +48,7 @@ describe('app routes for song model', () => {
   it('returns a song using via GET', async() => {
   
     const data = await request(app)
-      .get('/song/1');
+      .get('/songs/1');
       
     expect(data.body).toEqual({
       id: '1',
