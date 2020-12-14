@@ -14,7 +14,7 @@ describe('app routes for song model', () => {
     return pool.end();
   });
 
-  it.only('adds a song via POST', async() => {
+  it('adds a song via POST', async() => {
                 
     const data = await request(app)
       .post('/songs')
@@ -45,7 +45,7 @@ describe('app routes for song model', () => {
     }]);
   });
 
-  it('returns one song using via GET', async() => {
+  it('returns a song using via GET', async() => {
   
     const data = await request(app)
       .get('/song/1');
